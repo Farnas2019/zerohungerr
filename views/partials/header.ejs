@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Bracket</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap Cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/Team Bracket - Copy (2).jpg" type="image/x-icon" />
+</head>
+
+<body>
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="loader-container">
+            <div class="progress-br float shadow">
+                <div class="progress__item"></div>
+            </div>
+        </div>
+    </div>
+    <!-- END LOADER -->
+    <header class="top-navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light" style="font-size: 25px;" href="/">
+                    <img src="images/Team_Bracket_-_Copy__2_-removebg-preview.png" alt="" width="180" height="75">
+                </a>
+                <button class="navbar-toggler" style="outline: none;" type="button" data-toggle="collapse"
+                    data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbars-host">
+                    <ul class="navbar-nav ml-auto wow fadeInRightBig">
+                        <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#what">About Us
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="resturant">Resturant
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="leftover">Left Overs
+                            </a>
+                        </li>
+                        <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+                        <!-- Main css -->
+                        <link rel="stylesheet" href="css/style.css">
+                        <li class="nav-item"><a class="nav-link" href="faq">Faqs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact">Contact Us</a></li>
+                        
+                        
+                                <%if(!currentUser){%>
+                                    <button class="hover-btn-new  orange" style="height: 50px; margin-top: 10px; font-size: 19px;"><a
+                                        href="donate" style="text-decoration: none;">Donate</a></button>
+                                    <button class="hover-btn-new orange" style="height: 50px; margin-top: 10px; font-size: 19px; margin-left: 10px;" ><a
+                                        href="login" style="text-decoration: none;">Login</a></button> 
+                               <%}else{%>
+                                    <button class="hover-btn-new orange" style="height: 50px; margin-top: 10px; font-size: 19px; margin-left: 10px;" ><a
+                                        href="logout" style="text-decoration: none;">Logout</a></button> 
+                                        <button class="hover-btn-new  orange" style="height: 50px; margin-top: 10px; font-size: 19px; margin-left: 10px;"><a
+                                            href="profile" style="text-decoration: none;">Update Left-over</a></button>
+                              <%}%>  
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <%if(error && error.length >0){%>
+        <div class="alert alert-warning" role="alert">
+            <%= error %>
+        </div>
+    <%}%>
+    <%if(success && success.length >0){%>
+     <div class="alert alert-success" role="alert">
+        <%=success %>
+      </div>
+    <%}%>
+      <!-- End header -->

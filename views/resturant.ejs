@@ -1,0 +1,60 @@
+<%- include('./partials/header')%>
+<section class="section wb">
+    <div class="container">
+        <div class="section-title row text-center">
+            <div class="col-md-8 offset-md-2">
+                <h3>Available Resturants</h3>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <% helper.forEach(function(help){%>
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="blog-item">
+                    <div class="image-blog">
+                        <img src="uploads/<%=help.image%>" alt="RESTURANT IMAGE" class="img-fluid">
+                    </div>
+                    <div class="blog-desc " style="text-transform: uppercase; text-align:center">
+                        <h2><%=help.restname%></h2>
+                    </div>
+                    <div class="row">
+                    <div class="blog-desc col-lg-6 col-md-6 col-6" style="text-transform: uppercase; text-align:left;">
+                        <p><span>COUNTRY</span></p>
+                        <p><span>STATE</span></p>
+                        <p><span>CITY</span></p>
+                        <p><span>ADDRESS</span></p>
+                        <p><span>EMAIL</span></p>
+                        <p><span>LEFT OVER AVAILABLE</span></p>
+                        <p><span>OWNER"'"S NAME</span></p>
+                        
+                    </div>
+                    <div class="blog-desc col-lg-6 col-md-6 col-6" style="text-transform: uppercase;  text-align:right;">
+                     
+                        <p><%=help.country%></p>
+                        <p><%=help.state%></p>
+                        <p><%=help.city%></p>
+                        <p><%=help.location%></p>
+                        <p><%=help.username%></p>
+                        
+                   <%if(help.foodAvailable==true){%>
+                    <p>AVAILABLE</p>
+                    <%}else{%>
+                        <p>NOT AVAILABLE</p>
+                    <%}%> 
+                        <p><%=help.name%></p>
+                    </div>
+                </div>
+                    <div class="blog-button" style="text-align: center;">
+                        <a class="hover-btn-new orange" href="leftover"><span>Left-over</span></a>
+                    </div>
+                </div>
+            </div><!-- end col -->
+            <%}) %>
+            
+
+           
+        </div><!-- end row -->
+    </div>
+</section>
+<%- include('./partials/footer')%>

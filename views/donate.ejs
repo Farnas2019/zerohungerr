@@ -1,0 +1,51 @@
+<%- include('./partials/header')%>
+
+        <div class="container mt-5" style="padding-bottom: 100px;">
+        <div class="col-sm-6 sign-up">
+            <h1 class="text-center"><b>Donate</b></h1>
+            <form action='/pay/paystack/pay' method="POST">
+                <div class="row">
+                    <div class="col-sm-6">
+                            <div class="mb-3">
+                            <label for="formGroupExampleInput2" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2"
+                                placeholder="Farhan Nasiruddeen" required name='full_name'>
+                            </div>
+                     
+                    </div>
+
+                    <div class="col-sm-6">
+                   
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput2" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="formGroupExampleInput2"
+                                placeholder="Example@gmail.com" required name="email">
+                        </div>
+                                            
+                      
+                    </div>
+
+                    <div class="col-sm-12">
+                   
+                        <div class="mb-12">
+                            <label for="formGroupExampleInput2" class="form-label">Amount</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2"
+                                placeholder="N 5000" required name="amount">
+                        </div>
+                                            
+                      
+                    </div>
+                  
+                </div>
+                <div class=" d-flex justify-content-center mt-3">
+                    <p style="text-align:center"> Want to pay offline? <a href="/contact" style="color: orange;">Pay Offline</a></p>
+                </div>
+                    <div class=" d-flex justify-content-center mt-3">
+                        <button class="btn btn-default" type="submit">Submit</button>
+                    </div>
+                   
+            </form>
+        </div>
+    </div>
+    
+    <%- include('./partials/footer')%>

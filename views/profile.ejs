@@ -1,0 +1,30 @@
+<%- include('./partials/header')%>
+
+<div class="container mt-5" style="padding-bottom: 100px;">
+    <div class="col-sm-6 sign-up">
+        <h1 class="text-center"><b>User Profile</b></h1>
+        <form action="/profile?_method=PATCH" method="post" enctype="application/json">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="mb-12">
+                        <label for="formGroupExampleInput" class="form-label">Do You Have Left-Overs Available?</label>
+                        
+                    <select name="foodAvailable"  class="form-control" id="formGroupExampleInput">
+                        <option name="foodAvailable" value="true">YES</option>
+                        <option  value="false">NO</option>
+                    </select>
+                        </div>
+                   
+                 
+                </div>
+               
+                
+            </div>
+                           <div class=" d-flex justify-content-center mt-3">
+                    <button class="btn btn-default" type="submit">UPDATE</button>
+                </div>
+               
+        </form>
+    </div>
+</div>
+<%- include('./partials/footer')%>
